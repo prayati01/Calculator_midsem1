@@ -46,6 +46,17 @@ btn6.pack(side=LEFT)
 frame3 =Frame(frame)
 frame3.pack()
 
+#btn 7 to 9 
+btn7 = Button(frame3,text="7",width=9,height=3, command=lambda:addToText("7"), bg= 'light blue', fg='black')
+btn7.pack(side=LEFT)
+btn8 = Button(frame3,text="8",width=9,height=3, command=lambda:addToText("8"), bg= 'light blue', fg='black')
+btn8.pack(side=LEFT)
+btn9 = Button(frame3,text="9",width=9,height=3, command=lambda:addToText("9"), bg= 'light blue', fg='black')
+btn9.pack(side=LEFT)
+
+frame4 =Frame(frame)
+frame4.pack()
+
 
 
 wind.mainloop()
