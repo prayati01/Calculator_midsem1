@@ -9,6 +9,11 @@ text.pack(fill=X, padx=5,ipadx=5,ipady=5)
 
 def addToText(n):
     text.insert(END,n)
+    
+def calculate():
+    result = eval(text.get())
+    text.delete(0, END)
+    text.insert(0, result)
 
 frame = Frame(wind)
 frame.pack(side=TOP, anchor=NW)
@@ -26,5 +31,21 @@ btn2 = Button(frame1,text="2",width=9,height=3, command=lambda:addToText("2"))
 btn2.pack(side=LEFT)
 btn3 = Button(frame1,text="3",width=9,height=3, command=lambda:addToText("3"))
 btn3.pack(side=LEFT)
+
+frame2 =Frame(frame)
+frame2.pack()
+
+#btn 4 to 6
+btn4 = Button(frame2,text="4",width=9,height=3, command=lambda:addToText("4"), bg= 'light blue', fg='black')
+btn4.pack(side=LEFT)
+btn5 = Button(frame2,text="5",width=9,height=3, command=lambda:addToText("5"), bg= 'light blue', fg='black')
+btn5.pack(side=LEFT)
+btn6 = Button(frame2,text="6",width=9,height=3, command=lambda:addToText("6"), bg= 'light blue', fg='black')
+btn6.pack(side=LEFT)
+
+frame3 =Frame(frame)
+frame3.pack()
+
+
 
 wind.mainloop()
